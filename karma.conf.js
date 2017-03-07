@@ -31,7 +31,7 @@ module.exports = function (config) {
   config.set({
     basePath: '.',
     frameworks: ['qunit'],
-    plugins: ['karma-qunit', 'karma-rollup-preprocessor'],
+    plugins: ['karma-qunit', 'karma-rollup-preprocessor', 'karma-sauce-launcher'],
     files: [
       // freiform.js is watched to trigger the preprocessor on demand
       { pattern: './freiform.js', included: true, watched: true },
