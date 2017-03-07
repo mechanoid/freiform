@@ -1,6 +1,6 @@
 modern asynchronous form submit, using `FormData` and `URLSearchParams` to serialize the form fields to a `fetch` request.
 
-## usage
+## installation
 
 Install the npm package
 
@@ -19,6 +19,8 @@ or require it in your build chain.
 ```
 import freiform from 'freiform'
 ```
+
+## usage
 
 Having the library in place you can serialize a form request asynchrnously.
 
