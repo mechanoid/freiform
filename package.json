@@ -30,9 +30,10 @@
     "karma": "^1.5.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-qunit": "^1.2.1",
+    "karma-rollup-preprocessor": "^3.0.3",
     "qunitjs": "^2.1.1",
-    "standard": "^9.0.0",
     "rollup": "^0.41.4",
-    "rollup-plugin-babel": "^2.7.1"
+    "rollup-plugin-babel": "^2.7.1",
+    "standard": "^9.0.0"
   }
 }

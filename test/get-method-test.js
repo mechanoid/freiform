@@ -1,4 +1,4 @@
-/* global QUnit */
+/* global QUnit, freiform */
 
 const fixture = `<form action="/search" method="GET">
     <input type="text" name="q" value="some weird content #*$YY%&">
@@ -11,4 +11,8 @@ const fixture = `<form action="/search" method="GET">
 
 QUnit.test('freiform function is properly defined', function (assert) {
   assert.equal(typeof freiform, 'function', 'freiform is defined')
+})
+
+QUnit.test('a call to freiform returns a promise', function (assert) {
+  assert.ok(freiform() instanceof Promise, 'promise is returned')
 })
