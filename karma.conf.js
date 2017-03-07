@@ -38,6 +38,7 @@ module.exports = function (config) {
 
       // test infrastructure
       { pattern: 'node_modules/sinon/pkg/sinon.js', included: true, watched: false },
+      { pattern: 'node_modules/babel-polyfill/dist/polyfill.js', included: true, watched: false },
       { pattern: 'node_modules/formdata-polyfill/FormData.js', included: true, watched: false },
       { pattern: 'node_modules/url-search-params-polyfill/index.js', included: true, watched: false },
       { pattern: 'node_modules/whatwg-fetch/fetch.js', included: true, watched: false },
@@ -46,9 +47,9 @@ module.exports = function (config) {
       { pattern: 'test/**/*.js', watched: true }
     ],
     preprocessors: {
-      './freiform.js': ['rollup'],
-      './test/**/*.js': ['babel'],
-      './node_modules/formdata-polyfill/FormData.js': ['babel']
+      'freiform.js': ['rollup'],
+      'test/**/*.js': ['babel'],
+      'node_modules/formdata-polyfill/FormData.js': ['babel']
     },
     rollupPreprocessor: {
       entry: 'freiform.js',
