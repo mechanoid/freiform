@@ -53,7 +53,9 @@ module.exports = function (config) {
     },
 
     sauceLabs: {
-      testName: 'Freiform Library Tests'
+      testName: 'Freiform Library Tests',
+      startConnect: false,
+      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER
     },
     customLaunchers: customLaunchers,
     browsers: Object.keys(customLaunchers),
