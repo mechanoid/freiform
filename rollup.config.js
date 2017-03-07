@@ -1,10 +1,8 @@
-// import babel from 'rollup-plugin-babel'
-const babel = require('rollup-plugin-babel')
+import babel from 'rollup-plugin-babel'
 
-exports.default = ({
+export default {
   entry: 'freiform.js',
   format: 'iife',
   moduleName: 'freiform',
-  dest: 'dist/freiform.js',
   plugins: [ babel() ]
-})
+}
