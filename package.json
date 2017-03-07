@@ -4,7 +4,8 @@
   "description": "",
   "main": "freiform.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint freiform.js test"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/mechanoid/freiform/issues"
   },
-  "homepage": "https://github.com/mechanoid/freiform#readme"
+  "homepage": "https://github.com/mechanoid/freiform#readme",
+  "dependencies": {
+    "eslint": "^3.17.1",
+    "standard": "^9.0.0"
+  }
 }
