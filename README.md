@@ -32,7 +32,6 @@ NOTE: since FormData is used as POST-body serialization wrapper, it is encrypted
   <input type="text" name="fubar[0]" value="a">
   <input type="text" name="fubar[1]" value="b">
   <input type="text" name="fubar[2]" value="c">
-
   <button type="submit">Send</button>
 </form>
 ```
