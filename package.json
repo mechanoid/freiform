@@ -5,7 +5,14 @@
   "main": "freiform.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint freiform.js test"
+    "lint": "eslint freiform.js test",
+    "prebuild": "rm -f $npm_package_config_build_dir/freiform.js && mkdir -p $npm_package_config_build_dir",
+    "build": "babel freiform.js --out-file $npm_package_config_build_dir/freiform.js"
+  },
+  "config": {
+    "build": {
+      "dir": "dist"
+    }
   },
   "repository": {
     "type": "git",
@@ -17,8 +24,12 @@
     "url": "https://github.com/mechanoid/freiform/issues"
   },
   "homepage": "https://github.com/mechanoid/freiform#readme",
-  "dependencies": {
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
     "eslint": "^3.17.1",
     "standard": "^9.0.0"
+  },
+  "dependencies": {
   }
 }
