@@ -31,7 +31,7 @@ module.exports = function (config) {
   config.set({
     basePath: '.',
     frameworks: ['qunit'],
-    plugins: ['karma-qunit', 'karma-rollup-preprocessor', 'karma-sauce-launcher'],
+    plugins: ['karma-qunit', 'karma-babel-preprocessor', 'karma-rollup-preprocessor', 'karma-sauce-launcher'],
     files: [
       // freiform.js is watched to trigger the preprocessor on demand
       { pattern: './freiform.js', included: true, watched: true },
@@ -43,13 +43,19 @@ module.exports = function (config) {
       { pattern: 'test/**/*.js', watched: true }
     ],
     preprocessors: {
-      './freiform.js': ['rollup']
+      './freiform.js': ['rollup'],
+      './test/**/*.js': ['babel']
     },
     rollupPreprocessor: {
       entry: 'freiform.js',
       format: 'iife',
       moduleName: 'freiform',
       plugins: [ babel() ]
+    },
+    babelPreprocessor: {
+      options: {
+        presets: ['es2015']
+      }
     },
 
     sauceLabs: {
