@@ -4,10 +4,10 @@
   "description": "",
   "main": "freiform.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
     "lint": "eslint freiform.js test",
     "prebuild": "rm -f $npm_package_config_build_dir/freiform.js && mkdir -p $npm_package_config_build_dir",
-    "build": "babel freiform.js --out-file $npm_package_config_build_dir/freiform.js"
+    "build": "rollup -c rollup.config.js --output $npm_package_config_build_dir/freiform.js"
   },
   "config": {
     "build": {
@@ -25,11 +25,14 @@
   },
   "homepage": "https://github.com/mechanoid/freiform#readme",
   "devDependencies": {
-    "babel-cli": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
     "eslint": "^3.17.1",
-    "standard": "^9.0.0"
-  },
-  "dependencies": {
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-qunit": "^1.2.1",
+    "qunitjs": "^2.1.1",
+    "standard": "^9.0.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1"
   }
 }
